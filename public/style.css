@@ -1,0 +1,25 @@
+:root { --water: #0A2231; --water-deep: #061620; --water-line: #16394E; --water-raised: #0E2A3B; --ink: #E9EFF3; --ink-muted: #8FA8B8; --gold: #C9A227; --gold-soft: #E3C567;
+  --serif: Cambria, "Hoefler Text", "Iowan Old Style", Georgia, serif; --sans: Calibri, "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(180deg, var(--water) 0%, var(--water-deep) 100%) fixed; color: var(--ink); font: 1.0625rem/1.65 var(--sans); }
+main { max-width: 44rem; margin: 0 auto; padding: clamp(2.5rem, 9vh, 5rem) 1rem 3rem; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin: 0 0 1rem; }
+h1 { font: 400 clamp(2rem, 1.3rem + 3vw, 3.25rem)/1.1 var(--serif); margin: 0 0 1.25rem; }
+h2 { font: 400 1.4rem/1.3 var(--serif); margin: 2.75rem 0 0.75rem; }
+.lede { font-size: 1.1875rem; color: var(--ink); margin: 0 0 2rem; }
+a { color: var(--gold-soft); }
+.seeds { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.seeds > li > a { display: block; padding: 1.15rem 1.25rem; border: 1px solid var(--water-line); border-top: 3px solid var(--gold); border-radius: 3px; background: var(--water-raised); text-decoration: none; color: var(--ink); }
+.seeds > li > a:hover { border-color: var(--gold); }
+.seeds .name { display: block; font: 400 1.4rem/1.25 var(--serif); margin-bottom: 0.4rem; }
+.seeds .what { display: block; color: var(--ink-muted); font-size: 0.9688rem; }
+.seeds .url { display: block; margin-top: 0.6rem; font-size: 0.8125rem; letter-spacing: 0.08em; color: var(--gold-soft); }
+.rules { padding-left: 1.1rem; color: var(--ink-muted); }
+.rules strong { color: var(--ink); }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--water-line); font-size: 0.9375rem; color: var(--ink-muted); }
+.around { list-style: none; padding: 0; margin: 0; }
+.around li { padding: 0.6rem 0; border-bottom: 1px solid var(--water-line); }
+.around li span { display: block; color: var(--ink-muted); font-size: 0.9375rem; }
+
+.seeds .also { margin: 0.5rem 0 0 0.1rem; font-size: 0.9rem; color: var(--ink-muted); }
+.seeds .also a { color: var(--gold); }

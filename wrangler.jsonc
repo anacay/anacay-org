@@ -1,0 +1,11 @@
+// anacay.org: one static page listing the open work Anacay supports.
+// Two-stage deploy, like the others: `wrangler versions upload`, then `wrangler versions deploy`.
+{
+  "name": "anacay-org",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "./public" },
+  "workers_dev": true,
+  "observability": { "enabled": false }
+  // Once approved:
+  // "routes": [{ "pattern": "anacay.org", "custom_domain": true }, { "pattern": "www.anacay.org", "custom_domain": true }]
+}
