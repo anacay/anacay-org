@@ -5,7 +5,6 @@
   "compatibility_date": "2026-09-01",
   "assets": { "directory": "./public" },
   "workers_dev": true,
-  "observability": { "enabled": false }
-  // Once approved:
-  // "routes": [{ "pattern": "anacay.org", "custom_domain": true }, { "pattern": "www.anacay.org", "custom_domain": true }]
+  "observability": { "enabled": false },
+  "routes": [{ "pattern": "anacay.org", "custom_domain": true }, { "pattern": "www.anacay.org", "custom_domain": true }]
 }
