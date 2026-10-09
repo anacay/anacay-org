@@ -23,3 +23,5 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--water-
 
 .seeds .also { margin: 0.5rem 0 0 0.1rem; font-size: 0.9rem; color: var(--ink-muted); }
 .seeds .also a { color: var(--gold); }
+
+.behind { color: var(--ink-muted); margin: 0 0 0.75rem; }
