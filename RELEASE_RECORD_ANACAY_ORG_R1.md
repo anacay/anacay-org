@@ -4,7 +4,7 @@
 - **What:** One static page at anacay.org listing the open, non-commercial work Anacay supports ("Built by people, for people"). Links to cpp.anacay.org and anacay.com.
 - **Repo:** https://github.com/anacay/anacay-org (public, `main`)
 - **Worker:** `anacay-org` (Cloudflare account that also holds anacay.com)
-- **Deployed version:** `f969c248-d488-4d80-93fa-3cdfe1058823` at 100%
+- **Deployed version:** `634f296a-e898-4772-a98b-31cd57346b43` at 100% ("Who's behind this", see the update below; previously `f969c248-d488-4d80-93fa-3cdfe1058823`)
 - **Custom domains:** anacay.org, www.anacay.org (attached with `wrangler triggers deploy`; no DNS conflicts)
 - **Also on:** https://anacay-org.martinez-giol.workers.dev
 
@@ -21,6 +21,16 @@
 - `curl -I https://www.anacay.org` → `HTTP/2 200`, same CSP
 - Page links to `https://cpp.anacay.org/` and `https://anacay.com/`.
 - `dig MX anacay.org` → `5 mta-gw.infomaniak.ch.`
+
+## Update, same day: "Who's behind this"
+
+- **Change:** a "Who's behind this" section in `public/index.html` (`#behind`: the founders, Yadira Santos and Guillermo Martinez, with LinkedIn links and "Write to them" through anacay.com), and a `.behind` rule in `public/style.css`. Commit `7547566`.
+- **Deploy:** `wrangler versions upload` (`634f296a-e898-4772-a98b-31cd57346b43`), then `wrangler versions deploy` at 100%. No `triggers deploy`: routes and DNS unchanged.
+- **Verification:**
+  - `https://anacay.org` → `HTTP/2 200`, same CSP as above; the page has `<h2 id="behind">Who’s behind this</h2>`, and the live `style.css` carries `.behind`. The new page reached the edge about 60 seconds after the deploy.
+  - `https://www.anacay.org` → 200.
+  - anacay.com unchanged (etag `e2b113528f2a0a5892580e80e714382b`).
+- **Rollback:** `npx wrangler versions deploy f969c248-d488-4d80-93fa-3cdfe1058823@100%`.
 
 ## Not touched
 
